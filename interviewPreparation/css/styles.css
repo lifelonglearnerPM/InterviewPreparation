@@ -1,0 +1,89 @@
+/* Global Styles */
+
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li, figure, figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set default font family and line height */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f2f2f2; /* Light gray background */
+}
+
+/* Header styles */
+header {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0; /* Remove margin for the heading */
+    font-size: 2rem; /* Larger font size */
+}
+
+nav ul {
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    display: inline; /* Display navigation links horizontally */
+    margin-right: 10px; /* Add space between navigation links */
+}
+
+nav ul li a {
+    color: #fff; /* White text color for navigation links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 5px 10px; /* Add padding around links */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Darker background color on hover */
+}
+
+/* Main content section */
+main {
+    padding: 2rem; /* Add padding around main content */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 1rem;
+    position: fixed; /* Fixed position at the bottom of the page */
+    bottom: 0;
+    width: 100%; /* Full width footer */
+}
+
+/* Page-specific styles */
+h2 {
+    color: #333; /* Dark text color for main headings */
+}
+
+h3 {
+    color: #666; /* Gray text color for subheadings */
+}
+
+ul {
+    margin-bottom: 1rem; /* Add space below unordered lists */
+}
+
+/* Code snippet styling */
+pre {
+    background-color: #f9f9f9; /* Light gray background for code blocks */
+    padding: 10px; /* Add padding inside code blocks */
+    border: 1px solid #ccc; /* Gray border around code blocks */
+    white-space: pre-wrap; /* Wrap long lines of code */
+}
+
+/* Language select dropdown */
+.language-select {
+    margin-bottom: 1rem; /* Add space below language select dropdowns */
+}
