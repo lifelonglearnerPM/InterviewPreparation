@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interview Preparation</title>
+    <title>Index</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -11,12 +11,19 @@
         <h1>Interview Preparation</h1>
     </header>
     <main>
-        <menu id="menu">
-            <!-- Menu items will be dynamically generated here -->
-        </menu>
-        <section id="content">
-            <!-- Content from selected page will be loaded here -->
-        </section>
+        <nav id="menu">
+            <ul>
+                <li><a href="#" onclick="loadContent('index.html')">Home</a></li>
+                <li><a href="#" onclick="loadContent('html/content1.html')">Content 1</a></li>
+                <li><a href="#" onclick="loadContent('html/content2.html')">Content 2</a></li>
+            </ul>
+        </nav>
+        <div id="content">
+            <section>
+                <h2>Welcome</h2>
+                <p>Select a content from the menu.</p>
+            </section>
+        </div>
     </main>
     <script src="js/script.js"></script>
 </body>
