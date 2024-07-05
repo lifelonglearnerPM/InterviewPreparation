@@ -19,7 +19,7 @@ main {
     display: flex;
 }
 
-#nav-pane {
+#menu {
     width: 200px;
     background-color: #f0f0f0;
     padding: 20px;
@@ -30,22 +30,22 @@ main {
     padding: 20px;
 }
 
-/* Style navigation links */
-#nav-pane ul {
+/* Style menu items */
+#menu ul {
     list-style-type: none;
     padding: 0;
 }
 
-#nav-pane ul li {
+#menu ul li {
     margin-bottom: 10px;
 }
 
-#nav-pane ul li a {
+#menu ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
 }
 
-#nav-pane ul li a:hover {
+#menu ul li a:hover {
     color: #007bff;
 }

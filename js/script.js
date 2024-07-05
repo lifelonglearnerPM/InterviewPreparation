@@ -1,31 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const navPane = document.getElementById('nav-pane');
+    const menu = document.getElementById('menu');
     const contentSection = document.getElementById('content');
 
-    // Function to fetch list of HTML files in 'html' folder
-    function fetchHTMLFiles() {
-        return fetch('./html')
-            .then(response => response.text())
-            .then(html => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                const links = Array.from(doc.querySelectorAll('a'))
-                                  .map(a => a.getAttribute('href'))
-                                  .filter(link => link.endsWith('.html') && !link.includes('index.html'));
-                return links;
-            });
-    }
+    // Function to create menu items
+    function createMenuItems() {
+        const menuItems = [
+            { label: 'Home', file: 'index.html' },
+            { label: 'Content 1', file: 'html/content1.html' },
+            { label: 'Content 2', file: 'html/content2.html' }
+            // Add more menu items as needed
+        ];
 
-    // Function to create navigation links
-    function createNavigationLinks(files) {
         const ul = document.createElement('ul');
 
-        files.forEach(file => {
+        menuItems.forEach(item => {
             const li = document.createElement('li');
             const a = document.createElement('a');
-            const fileName = file.split('/').pop(); // Get filename from path
-            a.textContent = fileName.replace('.html', '').toUpperCase();
-            a.setAttribute('href', `html/${file}`);
+            a.textContent = item.label;
+            a.setAttribute('href', item.file);
             li.appendChild(a);
             ul.appendChild(li);
         });
@@ -35,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to load content into the content section
     function loadContent(file) {
-        fetch(`html/${file}`)
+        fetch(file)
             .then(response => response.text())
             .then(html => {
                 contentSection.innerHTML = html;
@@ -43,24 +35,18 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => console.error('Error loading content:', error));
     }
 
-    // Initialize the navigation and load initial content
-    fetchHTMLFiles()
-        .then(files => {
-            const navLinks = createNavigationLinks(files);
-            navPane.appendChild(navLinks);
+    // Initialize the menu and load initial content (content1.html by default)
+    menu.appendChild(createMenuItems());
 
-            // Load initial content (content1.html by default)
-            const initialFile = files[0];
-            loadContent(initialFile);
-        })
-        .catch(error => console.error('Error fetching HTML files:', error));
-
-    // Event delegation for navigation links
-    navPane.addEventListener('click', function(event) {
+    // Event delegation for menu links
+    menu.addEventListener('click', function(event) {
         event.preventDefault();
         if (event.target.tagName === 'A') {
             const file = event.target.getAttribute('href');
             loadContent(file);
         }
     });
+
+    // Load initial content (content1.html by default)
+    loadContent('html/content1.html');
 });
