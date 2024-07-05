@@ -1,10 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const menuItems = [
-        { label: 'Home', file: 'index.html' },
-        { label: 'Content 1', file: 'html/content1.html' },
-        { label: 'Content 2', file: 'html/content2.html' }
-    ];
-
     function loadContent(file) {
         fetch(file)
             .then(response => {
