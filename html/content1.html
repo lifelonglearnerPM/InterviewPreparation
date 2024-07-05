@@ -9,7 +9,6 @@
 <body>
     <header>
         <h1>Content 1</h1>
-        <button id="toggle-nav">Toggle Navigation</button>
     </header>
     <div class="container">
         <nav id="nav-pane">
@@ -24,34 +23,173 @@ if, else, while, for, function, return, var, let, const
                 </code></pre>
             </section>
             
+            <!-- Identifiers Section -->
             <section id="identifiers">
                 <h2>Identifiers</h2>
-                <p>Identifiers are names given to elements in a program such as variables, functions, arrays, etc.</p>
-                <pre><code>// Example identifiers in JavaScript
-let myVariable = 10;
-function myFunction() {
-    // Function code
-}
-                </code></pre>
-            </section>
+                <ul>
+                    <h3>What are Identifiers?</h3>
+                    <p>Identifiers are names given to various program elements such as variables, functions, arrays, etc. They help in identifying these elements during program execution.</p>
 
+                    <h3>Why are Identifiers important?</h3>
+                    <ul>
+                        <li>They provide a way to refer to various elements in the code.</li>
+                        <li>They improve code readability and maintainability.</li>
+                        <li>They help in avoiding conflicts by providing unique names.</li>
+                    </ul>
+
+                    <h3>Rules for Naming Identifiers</h3>
+                    <ul>
+                        <li>Identifiers can contain letters, digits, and underscores.</li>
+                        <li>Identifiers must begin with a letter or an underscore.</li>
+                        <li>Identifiers are case-sensitive.</li>
+                        <li>Keywords cannot be used as identifiers.</li>
+                    </ul>
+
+                    <h3>Example:</h3>
+                    <pre><code class="language-javascript">
+    // JavaScript example
+    let age = 30; // 'age' is an identifier
+    let name = 'Shrilakshmi Krishna'; // 'name' is an identifier
+                    </code></pre>
+                </ul>
+            </section>
+            <!-- Variables Section -->
             <section id="variables">
                 <h2>Variables</h2>
-                <p>Variables are containers for storing data values.</p>
-                <pre><code>// Example variables in JavaScript
-let num = 5;
-let name = 'John';
-                </code></pre>
+                <ul>
+                    <h3>What are Variables?</h3>
+                    <p>Variables are placeholders or containers for storing data in a program. They hold different types of values that can change as the program runs.</p>
+
+                    <h3>Why Use Variables?</h3>
+                    <ul>
+                        <li>Store data temporarily</li>
+                        <li>Enable data manipulation</li>
+                        <li>Make code more readable and maintainable</li>
+                    </ul>
+                    <ul>
+                        <table>
+                            <caption><h3>Variables Types Comparison</h3></caption>
+                            <thead>
+                                <tr>
+                                    <th>Variable Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Local variables</td>
+                                    <td>Declared within a function and accessible only within that function.</td>
+                                </tr>
+                                <tr>
+                                    <td>Global variables</td>
+                                    <td>Declared outside any function and can be accessed throughout the program.</td>
+                                </tr>
+                                <tr>
+                                    <td>Instance variables</td>
+                                    <td>Associated with an object and defined in a class. Belong to an instance of a class and are accessed using instance references.</td>
+                                </tr>
+                                <tr>
+                                    <td>Static variables or class variables</td>
+                                    <td>Shared among all instances of a class and typically used for constants or counters.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </ul>
+                    <h3>Example:</h3>
+                    <pre><code class="language-javascript">
+    // JavaScript example
+    let age = 30; // Local variable
+    let name = 'Shrilakshmi Krishna'; // Local variable
+                    </code></pre>
+                    <p>Variables can also be updated or reassigned throughout the program:</p>
+                    <pre><code class="language-java">
+    // Java example
+    int count = 0;
+    count = count + 1; // Updating variable value
+                    </code></pre>
+                </ul>
             </section>
 
-            <section id="datatypes">
+            <!-- Data Types Section -->
+            <section id="data-types">
                 <h2>Data Types</h2>
-                <p>Data types specify the type of data that a variable can hold.</p>
-                <pre><code>// Example data types in JavaScript
-let number = 10; // Number
-let text = 'Hello'; // String
-let isTrue = true; // Boolean
-                </code></pre>
+                <ul>
+                    <h3>What are Data Types?</h3>
+                    <p>Data types are classifications of data that tell the compiler or interpreter how the programmer intends to use the data. Common data types include integers, floats, strings, and booleans.</p>
+
+                    <h3>Why Use Data Types?</h3>
+                    <ul>
+                        <li><h4>Data manipulation and operations on the data</h4></li>
+                        <p>Datatypes define how data can be manipulated and what operations can be performed on it.</li>
+                        <h5>Example:</h5>
+                        <ul>
+                            <li>Arithmetic operations can be performed on integers and floating-point numbers only</li>
+                            <li>Concatenation can be done on strings only</li>
+                        </ul>
+                        <li><h4>Memory allocation, memory optimization and performance optimization</h4></li>
+                        <h5>Example:</h5>
+                        <li><h4>They ensure data integrity, accuracy and type safety</h4></li>
+                        <h5>Example:</h5>
+                    </ul>
+
+                    <table>
+                        <caption><h3>Data Types Comparison</h3></caption>
+                        <thead>
+                            <tr>
+                                <th>Data Type Category</th>
+                                <th>Description</th>
+                                <th>Examples</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Primitive</td>
+                                <td>Basic data types directly supported by the programming language.</td>
+                                <td>int, double, char, bool</td>
+                            </tr>
+                            <tr>
+                                <td>Derived</td>
+                                <td>Created using primitive data types, or "derive" their behavior and functionality from primitive types, includes pointers, arrays, references.</td>
+                                <td><ul><li>Integer pointer int*</li><li>Array of integer int[]</li><li>Reference to integer int&</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>Composite</td>
+                                <td>Combine multiple data types to form a complex structure, e.g., struct or class.</td>
+                                <td><ul><li>struct Person { string name; int age; };</li><li>class Car { string model; int year; }</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>Abstract</td>
+                                <td>Defined by the programmer to represent abstract concepts, often used in object-oriented programming.</td>
+                                <td>Abstract class with virtual functions</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>Example:</h3>
+                    <pre><code class="language-javascript">
+    // JavaScript example
+    let age = 30; // Integer
+    let name = 'Shrilakshmi Krishna'; // String
+    let isActive = true; // Boolean
+    let balance = 123.45; // Float
+                    </code></pre>
+                </ul>
+            </section>
+
+            <!-- Code Examples Section -->
+            <section id="code-examples">
+                <h2>Code Examples</h2>
+                <label for="language-select">Select Programming Language:</label>
+                <select id="language-select">
+                    <option value="java">Java</option>
+                    <option value="c">C</option>
+                    <option value="cpp">C++</option>
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="rust">Rust</option>
+                </select>
+                <div id="code-container">
+                    <!-- Code example will be loaded here -->
+                </div>
             </section>
         </main>
     </div>
