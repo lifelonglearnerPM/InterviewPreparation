@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     links.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            const file = this.getAttribute('href');
+            const file = this.getAttribute('onclick').match(/'(.*)'/)[1];
             loadContent(file);
         });
     });
