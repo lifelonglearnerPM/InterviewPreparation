@@ -1,127 +1,51 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset default margin and padding */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1em;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+main {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-header h1 {
-    margin: 0;
-}
-
-button {
-    background-color: #fff;
-    color: #4CAF50;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-button:hover {
-    background-color: #ddd;
-}
-
-.container {
-    display: flex;
-    margin-top: 20px;
-    transition: margin-left 0.3s;
-}
-
-nav {
+#nav-pane {
     width: 200px;
-    background: #fff;
+    background-color: #f0f0f0;
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    position: fixed;
-    top: 80px; /* Adjust based on header height */
-    bottom: 0;
-    overflow-y: auto; /* Allows scrolling if content is too long */
-    transition: transform 0.3s;
 }
 
-nav.hidden {
-    transform: translateX(-100%);
+#content {
+    flex: 1;
+    padding: 20px;
 }
 
-nav ul {
+/* Style navigation links */
+#nav-pane ul {
     list-style-type: none;
     padding: 0;
 }
 
-nav ul li {
-    margin: 10px 0;
+#nav-pane ul li {
+    margin-bottom: 10px;
 }
 
-nav ul li a {
+#nav-pane ul li a {
     text-decoration: none;
     color: #333;
-    display: block;
-    padding: 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    background-color: #ddd;
-}
-
-nav ul ul {
-    margin-left: 20px;
-    margin-top: 10px;
-    border-left: 1px solid #ddd;
-    padding-left: 10px;
-}
-
-nav ul ul li {
-    margin: 5px 0;
-}
-
-main {
-    flex: 1;
-    padding: 20px;
-    margin-left: 220px;
-    transition: margin-left 0.3s;
-}
-
-main.expanded {
-    margin-left: 20px;
-}
-
-footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
+#nav-pane ul li a:hover {
+    color: #007bff;
 }
