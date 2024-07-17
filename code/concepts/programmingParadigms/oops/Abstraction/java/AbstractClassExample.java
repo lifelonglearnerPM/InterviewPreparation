@@ -85,7 +85,8 @@ class CurrentAccount extends Account {
     }
 }
 
-public class Bank {
+//public class Bank {
+public class AbstractClassExample {  
     public static void main (String[] args) {
         Account savings = new SavingsAccount("SA000111",1000,5,500);
         Account current = new CurrentAccount("CA000111",1000,10,1000);
