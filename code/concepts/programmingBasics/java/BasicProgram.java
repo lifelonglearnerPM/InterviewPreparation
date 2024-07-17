@@ -1,15 +1,18 @@
 /******************************************************************************
+ * @author : lifelonglearnerPM
+ * @link : https://github.com/lifelonglearnerPM
+ *
+ * Java Programming Basics
+ * datatypes
+ * for loop
+ * operations
+ * typecast
+ *
+ *******************************************************************************/
 
-Java Programming Basics
-* datatypes
-* for loop
-* operations
-* typecast
-
-*******************************************************************************/
 import java.util.Arrays;
 
-public class BasicProgram 
+public class Main 
 {
     public static final double PI = 3.14159; // declare global constant
 
@@ -75,8 +78,9 @@ public class BasicProgram
         System.out.println(fullname);
         System.out.println(fullname.charAt(10));
         String nickNameHome = name; // string assignment
-        String nickNamePal = name.replace("Shrilakshmi","chuchu");
-        String nickNameBuddy = nickNamePal.replace("c","");
+        String example = "apple";
+        String nickNamePal = example.replace("le","lication");
+        String nickNameBuddy = nickNamePal.replace("lication","");
         System.out.println(nickNameHome);
         System.out.println(nickNamePal);
         System.out.println(nickNameBuddy);
@@ -102,13 +106,13 @@ public class BasicProgram
         }
         
         // contains() returns true if the substring is present, and false otherwise
-        if (nickNamePal.contains("chu"))
+        if (nickNamePal.contains("abc"))
         {
-            System.out.println("chu String found");
+            System.out.println("abc String found");
         }
         else
         {
-            System.out.println("chu String not found");
+            System.out.println("abc String not found");
         }
         
         

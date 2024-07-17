@@ -1,12 +1,14 @@
 /******************************************************************************
+ * @author : lifelonglearnerPM
+ * @link : https://github.com/lifelonglearnerPM
+ *
+ * Problem statement :
+ * Using 3 threads print 1,2,3,4,5 ... in sequence
+ *******************************************************************************/
 
-Problem statement :
-Using 3 threads print 1,2,3,4,5 ... in sequence
-
-*******************************************************************************/
 public class SequenceSyncPrint
 {
-    int counter = 1; // we need to sync this
+    int counter = 1; // we need to sync this shared int
     int maxNumThread = 3;
     int counterLimit = 15;
     

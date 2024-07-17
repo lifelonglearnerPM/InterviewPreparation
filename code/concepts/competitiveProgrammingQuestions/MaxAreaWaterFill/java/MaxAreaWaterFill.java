@@ -1,15 +1,19 @@
 /******************************************************************************
-Problem Statement:
-You are given an array "input" where "input[i]" represents the height of a line at position i. 
-The width of each bar is 1. 
-Compute the maximum area of water that can be trapped between the bars after a flood fill.
-
-*******************************************************************************/
+ * @author : lifelonglearnerPM
+ * @link : https://github.com/lifelonglearnerPM
+ *
+ * Problem Statement:
+ *
+ * You are given an array "input" where "input[i]" represents the height of a line at position i. 
+ * The width of each bar is 1. 
+ * Compute the maximum area of water that can be trapped between the bars after a flood fill.
+ *******************************************************************************/
 
 public class MaxAreaWaterFill
 {
     public static int maxAreaWaterFill (int[] input)
     {
+        // two-pointer method
         int left = 0;
         int right = input.length -1;
         

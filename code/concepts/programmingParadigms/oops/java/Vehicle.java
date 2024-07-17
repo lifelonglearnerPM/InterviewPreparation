@@ -1,16 +1,17 @@
 /******************************************************************************
+ * @author : lifelonglearnerPM
+ * @link : https://github.com/lifelonglearnerPM
+ *
+ * Java Programming Basics :
+ *
+ * enumerations
+ * Java Object Oriented Programming
+ * class
+ * Object
+ * 
+ *******************************************************************************/
 
-Java Programming Basics
-* enumerations
-
-Java Object Oriented Programming
-* class
-* Object
-* 
-
-*******************************************************************************/
-
-public class Vehicle
+abstract class Vehicle
 {
     public enum VehicleType {CAR, TRUCK, MOTORCYCLE, BICYCLE}
     // Attributes (data) describing a Vehicle
