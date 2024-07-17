@@ -10,6 +10,10 @@ public class Palindrome
         if (input == null) // if (input.length() == 0)
             return false;
         
+        /*
+        .replaceAll("[^a-zA-Z0-9]", ""): This method call uses regular expressions (regex) to 
+        replace all characters that are not ([^...]) alphanumeric (a-zA-Z0-9) with an empty string ("").
+        */
         String cleanStr = input.replaceAll("[^a-zA-Z0-9]","").toLowerCase();
         
         int left = 0;
