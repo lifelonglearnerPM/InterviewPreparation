@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Twitter - System Architecture Simulation</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/scripts.js" defer></script>
+    <script src="../js/diagram.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Design Twitter - Interactive System Architecture</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="whatsapp.html">WhatsApp Design</a>
+            <a href="youtube.html">YouTube Design</a>
+            <a href="data_pipeline.html">Data Pipeline</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="overview">
+            <h2>Overview of Twitter System Design</h2>
+            <p>In this interactive page, you'll simulate designing a scalable system for Twitter. You'll define architecture components such as:</p>
+            <ul>
+                <li>Handling massive user-generated content (tweets, media)</li>
+                <li>Efficiently managing user timelines</li>
+                <li>Real-time updates and notifications</li>
+                <li>Scalability and replication for high availability</li>
+            </ul>
+            <p>Drag and drop system components below to design your architecture.</p>
+        </section>
+
+        <section id="design-area">
+            <h2>Architecture Design</h2>
+            <div class="design-tool">
+                <canvas id="architectureCanvas"></canvas>
+                <div class="component-library">
+                    <h3>Component Library</h3>
+                    <ul>
+                        <li class="component" draggable="true" data-component="load-balancer">Load Balancer</li>
+                        <li class="component" draggable="true" data-component="web-server">Web Server</li>
+                        <li class="component" draggable="true" data-component="timeline-service">Timeline Service</li>
+                        <li class="component" draggable="true" data-component="tweet-storage">Tweet Storage (Database)</li>
+                        <li class="component" draggable="true" data-component="media-storage">Media Storage (S3)</li>
+                        <li class="component" draggable="true" data-component="notification-service">Notification Service</li>
+                        <li class="component" draggable="true" data-component="cache">Caching Layer (Redis/Memcached)</li>
+                        <li class="component" draggable="true" data-component="user-service">User Service</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="discussion">
+            <h2>Discussion Points</h2>
+            <form id="discussionForm">
+                <label for="scalability">How will you ensure scalability?</label>
+                <textarea id="scalability" name="scalability" rows="4"></textarea>
+
+                <label for="high-availability">How will you ensure high availability?</label>
+                <textarea id="high-availability" name="high-availability" rows="4"></textarea>
+
+                <label for="data-consistency">How will you manage data consistency across services?</label>
+                <textarea id="data-consistency" name="data-consistency" rows="4"></textarea>
+
+                <label for="failure-recovery">How will you handle failure recovery?</label>
+                <textarea id="failure-recovery" name="failure-recovery" rows="4"></textarea>
+                
+                <button type="button" onclick="exportDiscussion()">Export Discussion</button>
+            </form>
+        </section>
+
+        <section id="export-options">
+            <h2>Export Options</h2>
+            <p>You can export your system design and discussion as a document:</p>
+            <button onclick="exportToPDF()">Export as PDF</button>
+            <button onclick="exportToWord()">Export as Word Document</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 System Design Simulation. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Initialize the diagram and interaction functions
+        const canvas = document.getElementById('architectureCanvas');
+        const ctx = canvas.getContext('2d');
+        initializeCanvas(canvas, ctx);
+
+        document.querySelectorAll('.component').forEach(component => {
+            component.addEventListener('dragstart', dragStart);
+        });
+
+        canvas.addEventListener('dragover', dragOver);
+        canvas.addEventListener('drop', dropComponent);
+    </script>
+</body>
+</html>
